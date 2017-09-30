@@ -60,7 +60,10 @@ public class Practice4Test {
 			String first = "first";
 			String second = "second";
 			queue.enqueue(first);
+			queue.toString();
 			queue.enqueue(second);
+
+
 			if (queue.dequeue() == first && queue.dequeue() == second && queue.empty()) {
 				System.out.println("[+10%] Queue functions appear correct.");
 				grade += 10;
@@ -98,7 +101,12 @@ public class Practice4Test {
 			}
 			
 			System.out.println("====================");
-	
+			while(!stack.empty()){
+				stack.pop();
+			}
+			while(!queue.empty()){
+				queue.dequeue();
+			}
 			// Second tests: does it correctly find palindromes?
 			for (String expression : expressionList) {
 				if (isPalindrome(expression)) {
